@@ -11,9 +11,9 @@ The model can automatically analyze and judge the emotion of user comments and d
 - Flask framework deploys the model and opens the interface;
 - Queue calls interfaces to categorize emotions;
 
-~import torch
+import torch
 
-class BasicConfigs():
+`class BasicConfigs():
     #数据存放参数
     neg='data/neg'#负样本目录
     pos='data/pos'#正样本目录
@@ -39,6 +39,6 @@ class BasicConfigs():
     save_model_dir={#模型保存路径
         'textcnn':'model_storage/model_cnn.pt',
         'birnn':'model_storage/model_rnn.pt'
-    }~
+    }`
 
 
