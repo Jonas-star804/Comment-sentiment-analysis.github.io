@@ -11,14 +11,17 @@ The model can automatically analyze and judge the emotion of user comments and d
 - Flask framework deploys the model and opens the interface;
 - Queue calls interfaces to categorize emotions;
 
+## Process
+
+### Configure
 import torch
 
 ```
 class BasicConfigs():
     #数据存放参数
-    neg='data/neg'#负样本目录
-    pos='data/pos'#正样本目录
-    data_path='data'#分割后数据存放目录
+    neg='data/neg'   # Negative sample directory
+    pos='data/pos'   # Positive sample directory
+    data_path='data' # Directory for storing partitioned data
     text_vocab_path='model_storage/text.vocab'#文本词典存放目录
     label_vocab_path ='model_storage/label.vocab'#标签词典存放目录
     stop_word_path='data/stopword.txt'#停用词文件路径
@@ -33,7 +36,7 @@ class BasicConfigs():
     alpha=0.0001#L2惩罚项系数
     #textcnn配置参数
     kernel_sizes = [3, 4, 5]  # 3个 conv1d的size
-    num_channels = [100, 100, 100]#卷积核个数
+    num_channels = [100, 100, 100] # 卷积核个数
     # bilstm配置参数
     num_hiddens = 100#lstm神经元数
     num_layers = 1#lstm层数
