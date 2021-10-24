@@ -13,7 +13,8 @@ The model can automatically analyze and judge the emotion of user comments and d
 
 import torch
 
-`class BasicConfigs():
+'''
+class BasicConfigs():
     #数据存放参数
     neg='data/neg'#负样本目录
     pos='data/pos'#正样本目录
@@ -40,6 +41,6 @@ import torch
         'textcnn':'model_storage/model_cnn.pt',
         'birnn':'model_storage/model_rnn.pt'
     }
-    `
+'''
 
 
